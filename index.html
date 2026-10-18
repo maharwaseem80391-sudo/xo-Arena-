@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1020">
+    <title>XO Arena | Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+        <header class="header">
+            <a class="brand" href="#" aria-label="XO Arena home">
+                <span class="brand-icon">XO</span>
+                <span>XO <strong>ARENA</strong></span>
+            </a>
+            <span class="live-label"><span></span> TWO PLAYER GAME</span>
+        </header>
+
+        <section class="hero">
+            <p class="eyebrow">THE CLASSIC, REIMAGINED</p>
+            <h1>Ready. Set.<br><span>Make your move.</span></h1>
+            <p class="subtitle">Two players. One board. Endless rematches.</p>
+        </section>
+
+        <section class="scoreboard" aria-label="Player scores">
+            <article class="score-card x-card active" id="xCard">
+                <span class="player-symbol x-symbol">X</span>
+                <div class="player-info">
+                    <span class="player-name">PLAYER ONE</span>
+                    <strong class="player-letter">Cross</strong>
+                </div>
+                <span class="score" id="xScore">0</span>
+            </article>
+
+            <article class="score-card o-card" id="oCard">
+                <span class="player-symbol o-symbol">O</span>
+                <div class="player-info">
+                    <span class="player-name">PLAYER TWO</span>
+                    <strong class="player-letter">Circle</strong>
+                </div>
+                <span class="score" id="oScore">0</span>
+            </article>
+        </section>
+
+        <section class="game-panel">
+            <div class="game-top">
+                <div>
+                    <p class="panel-label">CURRENT MATCH</p>
+                    <h2 id="roundTitle">Round 01</h2>
+                </div>
+                <span class="turn-badge" id="turnBadge">X'S TURN</span>
+            </div>
+
+            <div class="status" id="status" role="status" aria-live="polite">
+                <span class="status-dot"></span>
+                <span id="statusText">Player One, it's your turn!</span>
+            </div>
+
+            <div class="board" id="board" role="group" aria-label="Tic-Tac-Toe game board">
+                <button class="cell" data-index="0" aria-label="Top left, empty"></button>
+                <button class="cell" data-index="1" aria-label="Top middle, empty"></button>
+                <button class="cell" data-index="2" aria-label="Top right, empty"></button>
+                <button class="cell" data-index="3" aria-label="Middle left, empty"></button>
+                <button class="cell" data-index="4" aria-label="Center, empty"></button>
+                <button class="cell" data-index="5" aria-label="Middle right, empty"></button>
+                <button class="cell" data-index="6" aria-label="Bottom left, empty"></button>
+                <button class="cell" data-index="7" aria-label="Bottom middle, empty"></button>
+                <button class="cell" data-index="8" aria-label="Bottom right, empty"></button>
+            </div>
+
+            <div class="actions">
+                <button id="newRound" class="primary-btn">↻ &nbsp; New Round</button>
+                <button id="resetGame" class="secondary-btn">Reset Scores</button>
+            </div>
+        </section>
+
+        <section class="how-to">
+            <div class="how-icon">✦</div>
+            <div>
+                <h3>How to play</h3>
+                <p>Take turns placing X and O. Get three in a row horizontally, vertically, or diagonally to win!</p>
+            </div>
+        </section>
+
+        <footer>
+            <span>XO ARENA</span>
+            <span>MADE FOR FRIENDLY RIVALRIES ✦</span>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
